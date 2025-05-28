@@ -1,56 +1,93 @@
 import React from 'react';
+import Footer from '../Footer'
 import '../styles.css'
 
 const Accueil = () => (
-    <div className='container'>
-        <header>
-            <h1>Bienvenue sur mon portfolio</h1>
-            <p>Je m'appelle Singuila Mbaye Amadou, développeur web passionné.</p>
-        </header>
-
-        <div>
-            <div>
-                <h2>Présentation</h2>
-                <p>
-                    Je suis un développeur spécialisé en JavaScript et React. J'aime créer des applications web modernes et performantes.
-                </p>
+    <div className='section'>
+        <div className='content-header'>
+            <header>
+                <h1>Bienvenue sur mon portfolio</h1>
+                <p>Je m'appelle Singuila Mbaye Amadou, développeur web passionné.</p>
+                <a href='' className='button'>Voir plus</a>
+            </header>
+        </div>
+        <div className='main'>
+            <div className='profile image before'>
+                <div>
+                    <h2>Qui suis-je ?</h2>
+                    <p>
+                        Je m'appelle <span>Singuila MBAYE AMADOU</span>. Âgé de 20 ans, je suis en 3e année d'un Bachelor Développeur Web à MyDigitalSchool Rennes. J'ai déjà eu l'occasion de travailler sur plusieurs projets web, ce qui m'a permis de développer mes compétences en développement frontend et backend. Curieux, motivé et passionné par les nouvelles technologies, je suis toujours prêt à relever de nouveaux défis.
+                    </p>
+                </div>
             </div>
-
-            <div>
+            <div id="skills" className='skills color before'>
                 <h2>Compétences</h2>
-                <ul>
-                    <li>JavaScript / TypeScript</li>
-                    <li>React / Redux</li>
-                    <li>HTML / CSS / SASS</li>
-                    <li>Node.js / Express</li>
-                    <li>Git / GitHub</li>
-                </ul>
+                <p>Ayant réalisé des études dans le développement, j'ai pu évidemment acquérir des compétences.</p>
+                <div className='under-skills'>
+                    <div>
+                        <h3>Front-end</h3>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>Javascript</li>
+                            <li>React / React Native</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Back-end</h3>
+                        <ul>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>Laravel</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div>
+            <div id="experiences" className='experience color before'>
                 <h2>Expériences</h2>
                 <ul>
                     <li>
-                        <strong>Développeur Frontend</strong> chez [Entreprise] (2022 - présent)
+                        <p><span>[STAGE] Technicien Junior</span></p>
+                        <p>chez <span>Biocoop</span></p>
+                        <p>(Janvier - Avril 2022)</p>
                     </li>
                     <li>
-                        <strong>Stage Développeur Web</strong> chez [Entreprise] (2021)
+                        <p><span>[STAGE] Développeur Web</span></p>
+                        <p>chez <span>Anapoly</span></p>
+                        <p>(Mai - Juin 2023)</p>
+                    </li>
+                    <li>
+                        <p><span>[STAGE] Développeur Web</span></p>
+                        <p>chez <span>Myrtilles - Les mots libres</span></p>
+                        <p>(Janvier - Février 2024)</p>
+                    </li>
+                    <li>
+                        <p><span>[ALTERNANCE] Intégrateur CSS</span></p>
+                        <p>chez <span>Touzazimut</span></p>
+                        <p>(Septembre 2024 - Août 2025)</p>
                     </li>
                 </ul>
             </div>
 
-            <div>
+            <div id className='projects color before'>
                 <h2>Projets</h2>
                 <ul>
                     <li>
-                        <strong>Portfolio</strong> - Site personnel réalisé avec React.
+                        <p><span>CyberSafeDLS</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus id leo auctor iaculis. Integer malesuada, enim ac pharetra sollicitudin, tellus metus iaculis leo, sit amet tincidunt tortor libero quis urna.</p>
                     </li>
                     <li>
-                        <strong>Application Todo</strong> - Gestionnaire de tâches en ligne.
+                        <p><span>TraceGPS</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus id leo auctor iaculis. Integer malesuada, enim ac pharetra sollicitudin, tellus metus iaculis leo, sit amet tincidunt tortor libero quis urna.</p>
+                    </li>
+                    <li>
+                        <p><span>LOCO</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus id leo auctor iaculis. Integer malesuada, enim ac pharetra sollicitudin, tellus metus iaculis leo, sit amet tincidunt tortor libero quis urna.</p>
                     </li>
                 </ul>
             </div>
 
+            <Footer />
         </div>
     </div>
 );
