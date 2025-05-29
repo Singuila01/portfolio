@@ -4,7 +4,7 @@ import MenuBureau from './MenuBureau';
 
 const Layout = ({ children }) => {
   return (
-    <div style={{ paddingBottom: '60px' }}> {/* Pour ne pas que le contenu passe sous le menu */}
+    <div> {/* Pour ne pas que le contenu passe sous le menu */}
       {children}
       <MenuMobile />
       <MenuBureau />
