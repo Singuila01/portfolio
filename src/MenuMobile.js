@@ -1,28 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './styles.css'
 
 const MenuMobile = () => {
+    const [menuOuvert, setMenuOuvert] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOuvert(!menuOuvert);
+    };
+
     return (
-        <header className='header mobile' style={styles.header}>
-            <div className='logo' style={styles.logo}>MonPortfolio</div>
-            <nav>
-                <button className='menu-bouton' style={styles.menuButton} aria-label="Ouvrir le menu">
-                    <span className='bar'></span>
-                    <span className='bar'></span>
-                    <span className='bar'></span>
+        <div className='header mobile'>
+            {/* Bouton burger en bas de la page */}
+            <div className='container'>
+                <button
+                    onClick={toggleMenu}
+                    aria-label="Ouvrir le menu"
+                    className='menu-boutton'
+                >
+                    <span style={styles.bar}></span>
+                    <span style={styles.bar}></span>
+                    <span style={styles.bar}></span>
                 </button>
-            </nav>
-        </header>
+
+                {menuOuvert && (
+                    <ul style={styles.menu} className='menu'>
+                        <li><a href="#" className='link'>Accueil</a></li>
+                        <li><a href="#profile" className='link'>Qui suis-je ?</a></li>
+                        <li><a href="#skills" className='link'>Compétences</a></li>
+                        <li><a href="#experiences" className='link'>Expériences</a></li>
+                        <li><a href="#projets" className='link'>Projets</a></li>
+                    </ul>
+                )}
+            </div>
+        </div>
     );
 };
 
 const styles = {
     bar: {
-        width: '25px',
+        width: '24px',
         height: '3px',
         background: '#fff',
         borderRadius: '2px',
-        display: 'block',
-    },
+    }
 };
 
 export default MenuMobile;
