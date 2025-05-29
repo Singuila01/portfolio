@@ -1,43 +1,71 @@
 import React from 'react';
 import Footer from '../Footer'
 import '../styles.css'
+import singuila from '../assets/singuila.jpg'
 
 const Accueil = () => (
     <div className='section'>
         <div className='content-header'>
-            <header>
+            <header className='desktop'>
                 <h1>Bienvenue sur mon portfolio</h1>
                 <p>Je m'appelle Singuila Mbaye Amadou, développeur web passionné.</p>
-                <a href='' className='button'>Voir plus</a>
+                {/* <a href='' className='button'>Voir plus</a> */}
+            </header>
+            <header className='phone'>
+                <h1><span>Portfolio de</span> <br />Singuila MBAYE AMADOU</h1>
+                <p><span>Intégrateur CSS</span> en alternance</p>
             </header>
         </div>
         <div className='main'>
-            <div className='profile image before'>
-                <div>
+            <div id='profile' className='profile image before'>
+                <div className='qui-suis-je'>
                     <h2>Qui suis-je ?</h2>
-                    <p>
-                        Je m'appelle <span>Singuila MBAYE AMADOU</span>. Âgé de 20 ans, je suis en 3e année d'un Bachelor Développeur Web à MyDigitalSchool Rennes. J'ai déjà eu l'occasion de travailler sur plusieurs projets web, ce qui m'a permis de développer mes compétences en développement frontend et backend. Curieux, motivé et passionné par les nouvelles technologies, je suis toujours prêt à relever de nouveaux défis.
-                    </p>
+                    <div>
+                        <div>
+                            <img src={singuila} />
+                        </div>
+                        <div className='presentation'>
+                            <p>
+                                Je m'appelle <span>Singuila MBAYE AMADOU</span>.<br/>Âgé de 20 ans, je suis en <span>3e année</span> d'un <span>Bachelor Développeur Web</span> à <span>MyDigitalSchool Rennes</span>.
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>Nom: Singuila MBAYE AMADOU</p>
+                                </li>
+                                <li>
+                                    <p>Age: 20 ans</p>
+                                </li>
+                                <li>
+                                    <p>Lieu de résidence: Gévezé</p>
+                                </li>
+                                <li>
+                                    <p>Etude: Bachelor Développeur Web</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                    
                 </div>
             </div>
             <div id="skills" className='skills color before'>
                 <h2>Compétences</h2>
-                <p>Ayant réalisé des études dans le développement, j'ai pu évidemment acquérir des compétences.</p>
+                <p>Ayant réalisé des études dans le développement informatique, j'ai pu évidemment acquérir des compétences.</p>
                 <div className='under-skills'>
                     <div>
                         <h3>Front-end</h3>
                         <ul>
-                            <li>HTML/CSS</li>
-                            <li>Javascript</li>
-                            <li>React / React Native</li>
+                            <li className='html'>HTML</li>
+                            <li className='css'>CSS</li>
+                            <li className='javascript'>Javascript</li>
+                            <li className='react'>React</li>
+                            <li className='react'>React Native</li>
                         </ul>
                     </div>
                     <div>
                         <h3>Back-end</h3>
                         <ul>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                            <li>Laravel</li>
+                            <li className='php'>PHP</li>
+                            <li className='sql'>SQL</li>
+                            <li className='php'>Laravel</li>
                         </ul>
                     </div>
                 </div>
@@ -69,23 +97,25 @@ const Accueil = () => (
                 </ul>
             </div>
 
-            <div id className='projects color before'>
+            <div id="projets" className='projects color before'>
                 <h2>Projets</h2>
                 <ul>
                     <li>
                         <p><span>CyberSafeDLS</span></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus id leo auctor iaculis. Integer malesuada, enim ac pharetra sollicitudin, tellus metus iaculis leo, sit amet tincidunt tortor libero quis urna.</p>
+                        <p>Site internet permettant de faire la prévention sur la cybersécurité.</p>
                     </li>
                     <li>
                         <p><span>TraceGPS</span></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus id leo auctor iaculis. Integer malesuada, enim ac pharetra sollicitudin, tellus metus iaculis leo, sit amet tincidunt tortor libero quis urna.</p>
+                        <p>TraceGPS est une application web permettant de tracer et partager les courses réalisées par des coureurs.</p>
                     </li>
                     <li>
                         <p><span>LOCO</span></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget purus id leo auctor iaculis. Integer malesuada, enim ac pharetra sollicitudin, tellus metus iaculis leo, sit amet tincidunt tortor libero quis urna.</p>
+                        <p>LOCO est une application mobile permettant aux particuliers de commander des produits des commerçants locaux, proche des chez eux.</p>
                     </li>
                 </ul>
             </div>
+
+            
 
             <Footer />
         </div>
