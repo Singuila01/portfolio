@@ -17,9 +17,7 @@ const MenuMobile = () => {
                     aria-label="Ouvrir le menu"
                     className='menu-boutton'
                 >
-                    <span style={styles.bar}></span>
-                    <span style={styles.bar}></span>
-                    <span style={styles.bar}></span>
+                    Ouvrir le menu
                 </button>
 
                 {menuOuvert && (

@@ -54,32 +54,38 @@ const Accueil = () => (
                                     <p>Job</p>
                                     <p>Intégrateur CSS</p>
                                 </li>
+                                <li className='travail'>
+                                    <p>Entreprise</p>
+                                    <p>Touzazimut</p>
+                                </li>
                             </ul>
                         </div>
                     </div>                   
                 </div>
             </div>
             <div id="skills" className='skills color before'>
-                <h2>Compétences</h2>
-                <p>Ayant réalisé des études dans le développement informatique, j'ai pu évidemment acquérir des compétences.</p>
-                <div className='under-skills'>
-                    <div>
-                        <h3>Front-end</h3>
-                        <ul>
-                            <li className='html'>HTML</li>
-                            <li className='css'>CSS</li>
-                            <li className='javascript'>Javascript</li>
-                            <li className='react'>React</li>
-                            <li className='react'>React Native</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Back-end</h3>
-                        <ul>
-                            <li className='php'>PHP</li>
-                            <li className='sql'>SQL</li>
-                            <li className='php'>Laravel</li>
-                        </ul>
+                <div>
+                    <h2>Compétences</h2>
+                    <p>Ayant réalisé des études dans le développement informatique, j'ai pu évidemment acquérir des compétences.</p>
+                    <div className='under-skills'>
+                        <div>
+                            <h3>Front-end</h3>
+                            <ul>
+                                <li className='html'>HTML</li>
+                                <li className='css'>CSS</li>
+                                <li className='javascript'>Javascript</li>
+                                <li className='react'>React</li>
+                                <li className='react'>React Native</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Back-end</h3>
+                            <ul>
+                                <li className='php'>PHP</li>
+                                <li className='sql'>SQL</li>
+                                <li className='php'>Laravel</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,27 +129,29 @@ const Accueil = () => (
             </div>
 
             <div id="projets" className='projects color before'>
-                <h2>Projets</h2>
-                <ul>
-                    <li>
-                        <div>
-                            <p><span>[CYBERSAFEDLS]</span></p>
-                        </div>
-                        <p>Site internet permettant de faire de la prévention sur la cybersécurité et ses enjeux.</p>
-                    </li>
-                    <li>
-                        <div>
-                            <p><span>[TRACEGPS]</span></p>
-                        </div>
-                        <p>TraceGPS est une application web permettant de tracer et partager les courses réalisées par des coureurs.</p>
-                    </li>
-                    <li>
-                        <div>
-                            <p><span>[LOCO]</span></p>
-                        </div>
-                        <p>LOCO est une application mobile permettant aux particuliers de commander des produits des commerçants locaux, proche des chez eux.</p>
-                    </li>
-                </ul>
+                <div>
+                    <h2>Projets</h2>
+                    <ul>
+                        <li>
+                            <div>
+                                <p><span>[CYBERSAFEDLS]</span></p>
+                            </div>
+                            <p>Site internet permettant de faire de la prévention sur la cybersécurité et ses enjeux.</p>
+                        </li>
+                        <li>
+                            <div>
+                                <p><span>[TRACEGPS]</span></p>
+                            </div>
+                            <p>TraceGPS est une application web permettant de tracer et partager les courses réalisées par des coureurs.</p>
+                        </li>
+                        <li>
+                            <div>
+                                <p><span>[LOCO]</span></p>
+                            </div>
+                            <p>LOCO est une application mobile permettant aux particuliers de commander des produits des commerçants locaux, proche des chez eux.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <Footer />

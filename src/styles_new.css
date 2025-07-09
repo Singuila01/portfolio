@@ -34,7 +34,6 @@ ul{
     justify-content: space-between;
     align-items: center;
     padding: 25px 50px;
-    /* background: #222; */
     background: linear-gradient(to bottom, rgb(34 34 34 / .6), rgb(34 34 34 / 0));
     color: #fff;
 }
@@ -125,16 +124,16 @@ ul{
     display: none;
 }
 
-/* ------------- */
 .main{
-    padding: 20px;
+    padding: 20px 0;
     background: #fafbfc;
 }
 .main>*{
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px;
+    box-sizing: border-box;
 }
 .main h2:not(.name){
     display: block;
@@ -176,8 +175,6 @@ ul{
     max-width: max-content;
 }
 .main .profile .qui-suis-je .presentation .prenom h2:hover{
-    /* background: rgb(34 34 34 / .3);
-    color: #fff; */
     rotate: -1deg;
 }
 .main .profile .qui-suis-je .presentation .prenom h2::after{
@@ -209,18 +206,28 @@ ul{
     scale: 1.05;
 }
 
+.main .skills, .main .projects{
+    max-width: 100%;
+    background: #222;
+    padding: 50px;
+}
+.main .skills>div, .main .projects>div{
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #fff;
+}
 .main .skills .under-skills{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
-.main .skills .under-skills>div>h3{
+.main .skills h2, .main .skills .under-skills>div>h3, .main .projects h2{
     margin: 10px 0;
     padding: 10px;
     width: 100%;
     max-width: max-content;
-    background: #222;
-    color: #fff;
+    background: #fff;
+    color: #222;
     rotate: -5deg;
 }
 .main .skills .under-skills>div>ul{
@@ -244,7 +251,7 @@ ul{
     display: block;
     position: relative;
     inset: 0;
-    background: #222;
+    background: #fff;
     width: 40px;
     height: 40px;
 }
@@ -289,9 +296,6 @@ ul{
     background: #000;
     opacity: .3;
 }
-/* .main .experience ul>li.biocoop{
-    background: url(./assets/logo/biocoop.png) no-repeat center / cover;
-} */
 .main .experience ul>li>div>p, .main .projects ul>li>div>p{
     display: inline-block;
     margin: 0 0 10px 0;
@@ -301,3 +305,81 @@ ul{
     font-weight: 800;
     padding: 0 10px 0 0;
 }
+
+
+@media screen and (max-width: 1440px) {
+    .content-header .desktop .hello{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .content-header .desktop .hello>div, .content-header .desktop .hello>div:last-child{
+        margin: 0 auto;
+    }
+    .content-header .desktop .hello>div:last-child img{
+        max-width: 350px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main .profile .qui-suis-je .presentation, .main .skills .under-skills, .main .experience ul, .main .projects ul, .main .skills .under-skills>div>ul{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .main .skills .under-skills{
+        margin: 20px 0;
+    }
+    .main .profile .qui-suis-je .presentation img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header.mobile{
+        display: block;
+        box-sizing: border-box;
+    }
+    .header.mobile .container{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .header.mobile .container button{
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+        max-width: 270px;
+        color: #222;
+        background: #fff;
+        font-size: calc(23px + (28 - 23) * ((100vw - 320px) / (1800 - 320)));
+        font-weight: 600;
+        rotate: -5deg;
+        border: none;
+    }
+    .header.mobile .container .menu>li {
+        background: #fff;
+        margin: 35px auto;
+        width: 100%;
+        max-width: 270px;
+        text-align: center;
+        rotate: -5deg;
+        padding: 15px;
+    }
+    .header.mobile .container .menu>li>a {
+        color: #222;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .content-header .desktop .hello>div>div{
+        flex-flow: column nowrap;
+    }
+
+    .header.bureau{
+        display: none;
+    }
+
+    .content-header .desktop{
+        justify-content: end;
+    }
+    .content-header .desktop .hello>div:last-child img{
+        max-width: 325px;
+    }
+}
+
